@@ -1,0 +1,54 @@
+#include <iostream>
+#include <stdlib.h>
+int main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "Russian");
+	using namespace std;
+	int a, b, c;
+	b = rand() % 3;
+	cout << "Выбери своё оружие" << endl;
+	cout << "[0]Камень\n[1]Ножницы\n[2]Бумага\n" << endl;
+	cin >> a;
+	switch (a) {
+	case 0: cout << "Вы выбрали камень\n";
+		break;
+	case 1: cout << "Вы выбрали ножницы\n";
+		break;
+	case 2: cout << "Вы выбрали бумагу\n";
+		break;
+	default: cout << "Ошибка ввода\n";
+	}cout << "Выбери своё оружие" << endl;
+	cout << "[0]Камень\n[1]Ножницы\n[2]Бумага\n" << endl;
+	switch (b) {
+	case 0: cout << "Компьютер выбрал камень\n";
+		break;
+	case 1: cout << "Компьютер выбрал ножницы\n";
+		break;
+	case 2: cout << "Компьютер выбрал бумагу\n";
+		break;
+	}if (a % 3 == b % 3 and a<4 and b%4) {
+		cout << "Ничья";
+	}
+	else if (a % 3 == 0 and b % 3 == 1) {
+		cout << "Ты выиграл";
+	}
+	else if (a % 4 == 1 and b % 4 == 0) {
+		cout << "Ты проиграл";
+	}
+	else if (a % 4 == 1 and b % 4 == 2) {
+		cout << "Ты выиграл";
+	}
+	else if (a % 4 == 2 and b % 4 == 1) {
+		cout << "Ты проиграл";
+	}
+	else if (a % 4 == 0 and b % 4 == 2) {
+		cout << "Ты проиграл";
+	}
+	else if (a % 4 == 2 and b % 4 == 0) {
+		cout << "Ты выиграл";
+	}
+	else {
+		cout << "Игра не началась";
+	}
+}
