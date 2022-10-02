@@ -12,8 +12,8 @@ void Solve()
         if (r > 0) b = 1;
     }
     if (b == 1)
-        pt << "true";
+        pt << true;
     else
-        pt << "False";
+        pt << false;
 
 }
