@@ -1,19 +1,17 @@
-#include "pt4.h"
+//Дано целое число N и набор из N целых чисел. Если в наборе имеются положительные числа, то вывести true; в противном случае вывести false.
+#include <iostream>
 using namespace std;
 
-void Solve()
+int main()
 {
-    Task("Series10");
     int i, n, r, b = 0;
-    pt >> n;
+    bool z = false;
+    cin >> n;
     for (i = 1; i <= n; ++i) {
-        pt << i;
-        pt >> r;
+        cin >> r;
         if (r > 0) b = 1;
+    }if (b == 1) {
+        z = true;
     }
-    if (b == 1)
-        pt << true;
-    else
-        pt << false;
-
+    cout << z;
 }
